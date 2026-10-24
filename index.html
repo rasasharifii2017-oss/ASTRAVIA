@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ASTRAVIA — Explore the Universe</title>
+<meta name="description" content="Explore the wonders of space with ASTRAVIA.">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{color-scheme:dark}
+body{font-family:Arial,Helvetica,sans-serif;background:#050714;color:#fff;min-height:100vh;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;z-index:-2;background:radial-gradient(ellipse at 75% 35%,#25205b 0%,transparent 38%),radial-gradient(ellipse at 15% 75%,#102b53 0%,transparent 35%),#050714}
+.stars{position:fixed;inset:0;z-index:-1;pointer-events:none;background-image:radial-gradient(2px 2px at 20% 30%,#fff9,transparent),radial-gradient(1px 1px at 70% 20%,#fff,transparent),radial-gradient(2px 2px at 80% 70%,#b9b5ff,transparent),radial-gradient(1px 1px at 35% 80%,#fff,transparent),radial-gradient(1px 1px at 55% 45%,#fff,transparent);background-size:230px 200px}
+nav{max-width:1150px;margin:auto;padding:28px 6%;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{font-size:23px;letter-spacing:5px;font-weight:800;color:#fff}
+.logo span{color:#9c8cff}
+nav a{color:#c7c7e8;text-decoration:none;font-size:14px}
+.navlinks{display:flex;gap:26px}
+.hero{max-width:1150px;margin:auto;padding:85px 6% 95px;display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:35px;min-height:590px}
+.tag{display:inline-block;color:#b8adff;border:1px solid #7770bb66;border-radius:30px;padding:9px 14px;font-size:11px;letter-spacing:2px;margin-bottom:25px}
+h1{font-size:clamp(46px,7vw,82px);line-height:.98;letter-spacing:-3px;margin-bottom:25px}
+h1 span{background:linear-gradient(100deg,#b8a7ff,#6ad8ff);background-clip:text;-webkit-background-clip:text;color:transparent}
+.intro{max-width:480px;color:#b7bad2;font-size:17px;line-height:1.8}
+.actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px}
+.btn{padding:14px 21px;border-radius:9px;text-decoration:none;font-weight:bold;font-size:14px;display:inline-block;transition:.2s}
+.primary{background:linear-gradient(100deg,#8972ff,#5b9dff);color:white;box-shadow:0 8px 30px #6b65ff30}
+.secondary{border:1px solid #ffffff30;color:#eee}
+.btn:hover{transform:translateY(-3px)}
+.planet-wrap{display:grid;place-items:center;min-height:350px;position:relative}
+.planet{width:min(70vw,310px);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 30% 25%,#d3c5ff 0%,#8274ed 15%,#3d47a5 42%,#171c4a 69%,#070916 78%);box-shadow:inset -28px -20px 55px #02030b,0 0 65px #7669ff4d,0 0 130px #4d69ff22;position:relative;animation:float 6s ease-in-out infinite}
+.planet:after{content:"";position:absolute;inset:24% -18%;border:2px solid #b6aaff99;border-radius:50%;transform:rotate(-22deg);box-shadow:0 0 20px #9285ff44}
+.moon{position:absolute;width:47px;height:47px;border-radius:50%;background:radial-gradient(circle at 30% 25%,#fff,#9ba5c9 45%,#343b63 75%);top:18%;right:8%;box-shadow:0 0 35px #a6b9ff55}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-15px)}}
+section{max-width:1150px;margin:auto;padding:45px 6% 85px}
+.section-head{text-align:center;margin-bottom:35px}
+.eyebrow{color:#a89aff;font-size:11px;letter-spacing:3px;margin-bottom:13px}
+h2{font-size:clamp(27px,4vw,40px);margin-bottom:12px}
+.sub{color:#aeb2cc;line-height:1.7}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{padding:26px 22px;background:linear-gradient(145deg,#ffffff0c,#ffffff04);border:1px solid #ffffff14;border-radius:16px;transition:.25s}
+.card:hover{transform:translateY(-5px);border-color:#a89aff77}
+.emoji{font-size:32px;margin-bottom:18px}
+.card h3{font-size:19px;margin-bottom:10px}
+.card p{color:#aeb2cc;font-size:14px;line-height:1.8}
+.card a{display:inline-block;margin-top:17px;color:#b9adff;text-decoration:none;font-size:13px}
+footer{text-align:center;border-top:1px solid #ffffff12;padding:28px 15px;color:#858aa9;font-size:12px;letter-spacing:1px}
+@media(max-width:720px){.navlinks{gap:13px}.navlinks a{font-size:12px}.logo{font-size:18px;letter-spacing:3px}.hero{grid-template-columns:1fr;padding-top:55px;text-align:center;gap:5px}.intro{margin:auto}.actions{justify-content:center}.planet-wrap{min-height:300px}.planet{width:220px}.cards{grid-template-columns:1fr}.card{padding:24px}h1{letter-spacing:-2px}}
+</style>
+</head>
+<body>
+<div class="stars"></div>
+<nav>
+  <a class="logo" href="#">ASTRA<span>VIA</span></a>
+  <div class="navlinks">
+    <a href="#home">Home</a>
+    <a href="#discover">Discover</a>
+    <a href="#about">About</a>
+  </div>
+</nav>
+<main>
+<section class="hero" id="home">
+  <div>
+    <div class="tag">✦ YOUR JOURNEY BEYOND EARTH</div>
+    <h1>Explore the<br><span>Infinite.</span></h1>
+    <p class="intro">Beyond the stars lies a universe full of mysteries. Discover distant worlds, magnificent galaxies, and the wonders of the cosmos.</p>
+    <div class="actions">
+      <a class="btn primary" href="#discover">Start Exploring ↗</a>
+      <a class="btn secondary" href="#about">Our Mission</a>
+    </div>
+  </div>
+  <div class="planet-wrap" aria-label="Illustration of a glowing planet">
+    <div class="moon"></div><div class="planet"></div>
+  </div>
+</section>
+<section id="discover">
+  <div class="section-head">
+    <div class="eyebrow">THE COSMOS AWAITS</div>
+    <h2>Discover the Unknown</h2>
+    <p class="sub">Every corner of space holds a new story.</p>
+  </div>
+  <div class="cards">
+    <article class="card">
+      <div class="emoji">🪐</div>
+      <h3>Exoplanets</h3>
+      <p>Explore worlds beyond our solar system and imagine what might exist among the stars.</p>
+      <a href="https://science.nasa.gov/exoplanets/" target="_blank" rel="noopener">Explore planets ↗</a>
+    </article>
+    <article class="card">
+      <div class="emoji">🌌</div>
+      <h3>Galaxies</h3>
+      <p>Travel through enormous collections of stars, cosmic dust, gas, and dark mysteries.</p>
+      <a href="https://science.nasa.gov/universe/galaxies/" target="_blank" rel="noopener">Discover galaxies ↗</a>
+    </article>
+    <article class="card">
+      <div class="emoji">🚀</div>
+      <h3>Space Missions</h3>
+      <p>Follow humanity's journey to understand our universe and explore beyond Earth.</p>
+      <a href="https://www.nasa.gov/missions/" target="_blank" rel="noopener">View missions ↗</a>
+    </article>
+  </div>
+</section>
+<section id="about">
+  <div class="section-head">
+    <div class="eyebrow">OUR VISION</div>
+    <h2>Curiosity Has No Limits</h2>
+    <p class="sub">ASTRAVIA is a little gateway to the big universe.<br>Look up, stay curious, and keep exploring.</p>
+  </div>
+</section>
+</main>
+<footer>ASTRAVIA © 2026 · MADE FOR THE CURIOUS</footer>
+</body>
+</html>
